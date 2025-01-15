@@ -73,7 +73,7 @@ int main(void)
 
     //Schedule for 15 faculty in each building
     string classDept1Fac[] = {"Dr. Able",
-                              "Dr. Brovo",
+                              "Dr. Bravo",
                               "Dr. Charlie",
                               "Dr. Dog",
                               "Dr. Echo",
