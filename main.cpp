@@ -4,12 +4,6 @@
 // Author: Dr. Rick Coleman
 // Date: January, 2009
 //======================================================
-
-//******************************************************
-// MODERATE CONFLICT EDITION
-//******************************************************
-
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <fstream>
@@ -70,8 +64,8 @@ int main(void)
     char deptPrefix2[] = "ECE";
 
     // Create 12 classrooms in each building
-    int dept1RmNums[] = {131, 132, 133, 133, 241, 242, 243, 243, 341, 342, 343, 344};
-    int dept2RmNums[] = {126, 126, 127, 128, 225, 226, 226, 228, 325, 326, 326, 328};
+    int dept1RmNums[] = {131, 132, 133, 134, 241, 242, 243, 244, 341, 342, 343, 344};
+    int dept2RmNums[] = {125, 126, 127, 128, 225, 226, 227, 228, 325, 326, 327, 328};
 
     // Class starting times
     string classStartTimes[] = {"8:00", "9:35", "11:10", "12:45", "2:20", "3:55", "5:30", "7:05"};
@@ -218,7 +212,7 @@ int main(void)
                             case 0 : // Classroom preference
                                 // Select a classroom index
                                 randNum = rand() % 12;
-                                if(fac < 20) // Department 1
+                                if(fac < 15) // Department 1
                                 {
                                     courseList1[(fac*3)+cl][2] |= CLASSROOM_SPEC;
                                     courseList1[(fac*3)+cl][3] = randNum;
@@ -232,7 +226,7 @@ int main(void)
                             case 1 : // Time slot preference
                                 // Select a time index
                                 randNum = rand() % 8;
-                                if(fac < 20) // Department 1
+                                if(fac < 15) // Department 1
                                 {
                                     courseList1[(fac*3)+cl][2] |= TIME_SPEC;
                                     courseList1[(fac*3)+cl][3] = randNum;
